@@ -1,7 +1,5 @@
 #include "Stack.h"
 
-typedef char elType;
-
 struct StackElement {
 	elType element;
 	StackElement* next = nullptr;
@@ -12,7 +10,7 @@ struct Stack {
 	int size = 0;
 };
 
-void push(Stack* stack, char element) {
+void push(Stack* stack, elType element) {
 	StackElement* newTop = new StackElement;
 	newTop->element = element;
 	newTop->next = stack->top;
