@@ -12,7 +12,7 @@ struct CircleList {
 	int size = 0;
 };
 
-// Функции1
+// Функции, ч.1.
 int getSize(CircleList* list) {
 	return (list->size);
 };
@@ -25,26 +25,15 @@ CircleList* createList() {
 	return list;
 };
 
+CircleListElement* getHead(CircleList* list) {
+	return list->head;
+};
+
 void deleteList(CircleList* list) {
 	while (getSize(list) > 1) {
 		deleteElement(list, list->head);
 	}
 	delete list->head;
-};
-
-CircleListElement* getHead(CircleList* list) {
-	return list->head;
-};
-
-// Функции2
-CircleListElement* getNext(CircleListElement* prevElement) {
-	return prevElement->next;
-};
-
-CircleListElement* addElement(CircleList* list, CircleListElement* prevElement) {
-	prevElement->next = new CircleListElement;
-	list->size += 1;
-	return prevElement->next;
 };
 
 void deleteElement(CircleList* list, CircleListElement* prevElement) {
@@ -59,9 +48,20 @@ void deleteElement(CircleList* list, CircleListElement* prevElement) {
 	else {
 		temp = prevElement->next;
 	}
-	delete prevElement->next;
 	prevElement->next = temp->next;
+	delete temp;
 	list->size -= 1;
+};
+
+// Функции, ч.2.
+CircleListElement* getNext(CircleListElement* prevElement) {
+	return prevElement->next;
+};
+
+CircleListElement* addElement(CircleList* list, CircleListElement* prevElement) {
+	prevElement->next = new CircleListElement;
+	list->size += 1;
+	return prevElement->next;
 };
 
 void setNumber(CircleListElement* element, int inNumber) {
