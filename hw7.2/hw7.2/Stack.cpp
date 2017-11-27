@@ -1,15 +1,16 @@
 #include "Stack.h"
 
+typedef char elType;
+
+struct StackElement {
+	elType element;
+	StackElement* next = nullptr;
+};
+
 struct Stack {
 	StackElement* top = nullptr;
 	int size = 0;
 };
-
-struct StackElement {
-	char element;
-	StackElement* next = nullptr;
-};
-
 
 void push(Stack* stack, char element) {
 	StackElement* newTop = new StackElement;
@@ -27,11 +28,11 @@ int getSize(Stack* stack) {
 	return stack->size;
 }
 
-char pop(Stack* stack) {
+elType pop(Stack* stack) {
 	if (isEmpty(stack)) {
 		return '0';
 	}
-	char returnIt = stack->top->element;
+	elType returnIt = stack->top->element;
 	StackElement* oldTop = stack->top;
 	stack->top = oldTop->next;
 	delete oldTop;
