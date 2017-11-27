@@ -48,8 +48,8 @@ int main()
 	}
 	qsort(sortArray, 0, length);
 	fin.close();
-	cout << "If some integers appear the same amount of times(which is maximum),\nprogram will print the least integer" << endl;
-	cout << commonInt(sortArray, length) << " is the most common int in array" << endl;
+	cout << "≈сли какие-то числа встречаютс€ в массиве с одинаковой частотой(и это максимум),\nто программа выведет наименьшее из них" << endl;
+	cout << commonInt(sortArray, length) << " встречаетс€ чаще всех в массиве" << endl;
 	delete[] sortArray;
 	pause();
 	return 0;

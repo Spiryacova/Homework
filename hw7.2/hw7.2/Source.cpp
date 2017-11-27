@@ -4,7 +4,7 @@
 
 //Написать программу проверки баланса скобок в строке, скобки могут быть трёх видов : (), [], {}.
 //Скобочная последовательность вида({ ) } считается некорректной, ({}) - корректной.
-// Оно работает
+//f
 using namespace std;
 
 bool isBalanced(string input) {
@@ -49,45 +49,6 @@ bool isBalanced(string input) {
 	}
 	deleteStack(stack);
 	return isBalanced;
-}
-
-void testStack() {
-	Stack* stack = newStack();
-	push(stack, 'a');
-	char a = pop(stack);
-	if (a == 'a' && isEmpty(stack)) {
-		cout << "Stack test: Ok" << endl;
-	}
-	else {
-		cout << "Stack works wrong" << endl;
-	}
-	if (a == '0') {
-		cout << "It was empty" << endl;
-	}
-}
-
-void tests() {
-	string input1 = "()";
-	if (isBalanced(input1)) {
-		cout << "Test 1: Ok" << endl;
-	}
-	else {
-		cout << "Test 1: Failed" << endl;
-	}
-	string input2 = "({)}";
-	if (!isBalanced(input2)) {
-		cout << "Test 2: Ok" << endl;
-	}
-	else {
-		cout << "Test 2: Failed" << endl;
-	}
-	string input3 = "({})";
-	if (isBalanced(input3)) {
-		cout << "Test 3: Ok" << endl;
-	}
-	else {
-		cout << "Test 3: Failed" << endl;
-	}
 }
 
 int main() {

@@ -44,9 +44,7 @@ int qsort(int* sortArray, unsigned int start, unsigned int end) {
 		}
 		for (unsigned int index = indexOfEdge; index < length; ++index) {
 			if (edge > sortArray[index]) {
-				//swap elements with indexes indexOfEdge+1 and index
 				swap(sortArray[index], sortArray[indexOfEdge + 1]);
-				//swap elements with indexes indexOfEdge and indexOfEdge+1
 				swap(sortArray[indexOfEdge], sortArray[indexOfEdge + 1]);
 				++indexOfEdge;
 			}
