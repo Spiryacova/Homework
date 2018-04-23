@@ -27,7 +27,7 @@ namespace TickTackToe
 		/// One turn of game
 		/// Checkes validation of turn, changes side and button's view if it was valid
 		/// </summary>
-		public static void Step(int number) {
+		public static void Step(string data) {
 
 		}
 

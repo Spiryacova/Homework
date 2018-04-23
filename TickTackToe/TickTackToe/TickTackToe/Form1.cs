@@ -13,8 +13,8 @@ namespace TickTackToe
 		private void OnButtonClick(object sender, EventArgs e)
 		{
 			Button button = (Button)sender;
-			int number = (int)button.Tag;
-			TickTackToe.Step(number);
+			string data = (string)button.Tag;
+			TickTackToe.Step(data);
 		}
 
 		private void OnButtonExitClick(object sender, EventArgs e)
