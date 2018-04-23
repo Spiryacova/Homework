@@ -16,6 +16,16 @@ namespace TickTackToe
 			Application.Run(new Form1());
 		}
 	}
+	public class Result
+	{
+		bool validation = false;
+		char symbol = '-';
+
+		public bool GetValidation()
+		=> validation;
+		public char GetSymbol()
+		=> symbol;
+	}
 
 	static class TickTackToe
 	{
@@ -27,7 +37,7 @@ namespace TickTackToe
 		/// One turn of game
 		/// Checkes validation of turn, changes side and button's view if it was valid
 		/// </summary>
-		public static void Step(string data) {
+		public static Result Step(string data) {
 
 		}
 

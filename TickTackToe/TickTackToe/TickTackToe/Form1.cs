@@ -14,7 +14,12 @@ namespace TickTackToe
 		{
 			Button button = (Button)sender;
 			string data = (string)button.Tag;
-			TickTackToe.Step(data);
+			var result = TickTackToe.Step(data);
+			if (result.GetValidation())
+			{
+				data += result.GetSymbol();
+				// (Button)sender.Tag = data;
+			}
 		}
 
 		private void OnButtonExitClick(object sender, EventArgs e)
