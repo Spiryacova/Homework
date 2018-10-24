@@ -11,6 +11,9 @@ namespace MD5_classwork
 {
 	class Program
 	{
+		//
+		// It does even work
+		//
 		static void CheckSumm(String directoryName)
 		{
 			String[] dirs = Directory.GetDirectories(directoryName);
@@ -41,11 +44,16 @@ namespace MD5_classwork
 					fileStream.Close();
 				}
 			}
-		} // It does even work
+		} 
+
+		//
+		// UNFINISHED
+		//
 		static void CheckSummParallel(String directoryName)
 		{
 
-		} // UNFINISHED
+		} 
+
 		static void Main(string[] args)
 		{
 			Stopwatch stopWatch = new Stopwatch();
