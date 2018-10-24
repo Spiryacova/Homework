@@ -59,9 +59,8 @@ namespace MD5_classwork
 			Stopwatch stopWatch = new Stopwatch();
 			stopWatch.Start();
 
-			Console.WriteLine("Choose which folder at the desctop to open");
-			String directoryName = "C:\\Users\\julia\\Desktop\\";
-			directoryName += Console.ReadLine();
+			Console.WriteLine("Enter path(for example C:\\Users\\User\\TestFolder");
+			String directoryName = Console.ReadLine();
 			CheckSumm(directoryName);
 
 			stopWatch.Stop();
